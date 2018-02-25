@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Kava-Labs/ilp-plugin-paypal#readme",
   "dependencies": {
-    "ilp-plugin-btp": "^1.1.8"
+    "ilp-plugin-btp": "^1.1.8",
+    "paypal-rest-sdk": "^1.8.1"
   }
 }

@@ -4,7 +4,7 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
+ß
 # Runtime data
 pids
 *.pid
@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+# paypal sdk credential
+paypal_sdk.txt
+
+# paypal tests
+paypal_curl_examples.txt
+paypal_test.js
