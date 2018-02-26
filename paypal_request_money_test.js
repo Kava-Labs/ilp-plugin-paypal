@@ -11,7 +11,7 @@ paypal.configure({
 
 
 function createPaypalInvoice(api, receiver_email, amount, currency='USD') {
-
+// Create an invoice JSON object
     var create_invoice_json = {
         "merchant_info": {
             "email": "connector@kava.io",
@@ -67,13 +67,15 @@ function createPaypalInvoice(api, receiver_email, amount, currency='USD') {
             "value": amount
         }
     };
+    // Create the invoice
     api.invoice.create(create_invoice_json, function (error, invoice) {
         if (error) {
             throw error;
         } else {
             console.log("Create Invoice Response");
             console.log(invoice.id)
-            paypal.invoice.send(invoice.id, function (error, rv) {
+            // Send the invoice to the recicpient's email
+            api.invoice.send(invoice.id, function (error, rv) {
                 if (error) {
                     console.log(error.response);
                     throw error;
